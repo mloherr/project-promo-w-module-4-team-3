@@ -1,7 +1,7 @@
-import Header from './Header';
-import { Link } from 'react-router-dom';
-import '../scss/components/LandingPage.scss';
-import choripopins from '../images/choripopins.jpg';
+import Header from "./Header";
+import { Link } from "react-router-dom";
+import "../scss/components/LandingPage.scss";
+import choripopins from "../images/choripopins.jpg";
 
 function LandingPage() {
   return (
@@ -11,7 +11,7 @@ function LandingPage() {
         <figure className="logoTeam">
           <img src={choripopins} alt="Logo del equipo" />
         </figure>
-        <Link to="/NewProject">
+        <Link to="/MainPage">
           <button className="landingPage__button">Crear Proyecto</button>
         </Link>
       </main>
