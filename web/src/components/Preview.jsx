@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-// import CardUrl from "./CardUrl";
 
 function Preview({ projectInfo }) {
   const divStyle = { backgroundImage: `url(${projectInfo.photo})` };

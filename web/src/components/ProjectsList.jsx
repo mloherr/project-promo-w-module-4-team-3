@@ -1,9 +1,11 @@
 import ProjectCard from "./ProjectCard";
 
-function ProjectsList({ projectInfo }) {
+function ProjectsList({ projectsApi }) {
   return (
     <ul>
-      <ProjectCard projectInfo={projectInfo} />
+      {projectsApi.map((project) => {
+        return <ProjectCard key={project.idAuthor} projectApi={project} />;
+      })}
     </ul>
   );
 }
