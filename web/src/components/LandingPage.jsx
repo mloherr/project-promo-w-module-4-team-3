@@ -11,7 +11,7 @@ function LandingPage() {
         <figure className="logoTeam">
           <img src={choripopins} alt="Logo del equipo" />
         </figure>
-        <Link to="/MainPage">
+        <Link to="/MainPage/">
           <button className="landingPage__button">Crear Proyecto</button>
         </Link>
       </main>

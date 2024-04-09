@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import "../scss/App.scss";
 
 import LandingPage from "./LandingPage";
 import MainPage from "./MainPage";
 import localStorage from "../services/localStorage";
+import projectApi from "../services/projectsApi";
 
 const App = () => {
   const infoDefault = {
@@ -25,6 +26,13 @@ const App = () => {
     localStorage.get("project") || infoDefault
   );
   const [url, setUrl] = useState("");
+  const [projectsApi, setProjectsApi] = useState([]);
+
+  useEffect(() => {
+    projectApi.getProjectsFromApi().then((response) => {
+      setProjectsApi(response.projects);
+    });
+  }, []);
 
   const handleCreateProject = () => {
     fetch("https://dev.adalab.es/api/projectCard", {
@@ -53,7 +61,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route
-          path="/MainPage"
+          path="/MainPage//*"
           element={
             <MainPage
               projectInfo={projectInfo}
@@ -62,6 +70,7 @@ const App = () => {
               updateAvatar={handleProjectInfo}
               onClickSave={handleCreateProject}
               onClickReset={handleReset}
+              projectsApi={projectsApi}
             />
           }
         />
