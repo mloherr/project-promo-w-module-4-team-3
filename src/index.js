@@ -41,10 +41,23 @@ server.post('/api/newproject', async (req, res) => {
     req.body.job,
     req.body.photo,
   ]);
-});
 
-const sql =
-  'INSERT INTO projects (name, slogan, descr, technologies, image, urlGithub, urlDemo, fk_idAuthor) VALUES (?,?,?,?,?,?,?,?)';
+  const sql =
+    'INSERT INTO projects (name, slogan, descr, technologies, image, urlGithub, urlDemo, fk_idAuthor) VALUES (?,?,?,?,?,?,?,?)';
+  const [projectResult] = await connection.query(sql, [
+    req.body.name,
+    req.body.slogan,
+    req.body.desc,
+    req.body.technologies,
+    req.body.image,
+    req.body.repo,
+    req.body.demo,
+    authorResult.insertId,
+  ]);
+  res
+    .status(201)
+    .json({ sucess: true, idProject: projectResult.insertId, idAuthor: authorResult.insertId });
+});
 
 const staticServer = './web';
 server.use(express.static(staticServer));
