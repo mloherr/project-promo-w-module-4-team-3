@@ -34,7 +34,7 @@ server.get('/api/projects', async (req, res) => {
 });
 
 server.post('/api/newproject', async (req, res) => {
-  const connection = getDBConnection();
+  const connection = await getDBConnection();
   const authorQuerySQL = 'INSERT INTO author (author, job, photo) VALUES (?,?,?)';
   const [authorResult] = await connection.query(authorQuerySQL, [
     req.body.autor,
