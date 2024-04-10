@@ -60,6 +60,7 @@ MainPage.propTypes = {
   updateAvatar: PropTypes.func.isRequired,
   onClickSave: PropTypes.func.isRequired,
   onClickReset: PropTypes.func.isRequired,
+  projectsApi: PropTypes.object.isRequired,
   cardUrl: PropTypes.string.isRequired,
 };
 

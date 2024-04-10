@@ -1,0 +1,9 @@
+@media screen and (min-width: 768px) {
+    .projectList__container {
+        grid-column: span 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+        justify-items: stretch;
+    }
+}

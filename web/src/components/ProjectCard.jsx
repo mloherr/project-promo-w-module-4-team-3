@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function ProjectCard({ projectApi }) {
   const divStyle = { backgroundImage: `url(${projectApi.photo})` };
 
@@ -50,5 +52,9 @@ function ProjectCard({ projectApi }) {
     </article>
   );
 }
+
+ProjectCard.propTypes = {
+  projectApi: PropTypes.object.isRequired,
+};
 
 export default ProjectCard;
