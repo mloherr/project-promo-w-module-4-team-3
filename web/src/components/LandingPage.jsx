@@ -1,7 +1,7 @@
-import Header from "./Header";
-import { Link } from "react-router-dom";
-import "../scss/components/LandingPage.scss";
-import choripopins from "../images/choripopins.jpg";
+import Header from './Header';
+import { Link } from 'react-router-dom';
+import '../scss/components/LandingPage.scss';
+import choripopins from '../images/choripopins.jpg';
 
 function LandingPage() {
   return (
