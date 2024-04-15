@@ -37,8 +37,7 @@ server.get('/api/projects', async (req, res) => {
 
 server.post('/api/newproject', async (req, res) => {
   const connection = await getDBConnection();
-  const authorQuerySQL =
-    'INSERT INTO author (author, job, photo) VALUES (?,?,?)';
+  const authorQuerySQL = 'INSERT INTO author (author, job, photo) VALUES (?,?,?)';
   const [authorResult] = await connection.query(authorQuerySQL, [
     req.body.autor,
     req.body.job,
@@ -61,7 +60,7 @@ server.post('/api/newproject', async (req, res) => {
     sucess: true,
     idProject: projectResult.insertId,
     idAuthor: authorResult.insertId,
-    cardURL: `http://localhost:5173/project-promo-w-module-4-team-3/detail/${projectResult.insertId}`,
+    cardURL: `http://localhost:5001/detail/${projectResult.insertId}`,
   });
 });
 
@@ -70,10 +69,14 @@ server.get('/detail/:idProject', async (req, res) => {
   const connection = await getDBConnection();
   const sqlQuery =
     'SELECT * FROM projects, author WHERE projects.fk_idAuthor = author.idAuthor AND projects.idProject = ?';
-  const [result] = connection.query(sqlQuery, [idProject]);
+  const [result] = await connection.query(sqlQuery, [idProject]);
   connection.end();
   res.render('detail', { project: result[0] });
 });
 
 const staticServer = './web';
 server.use(express.static(staticServer));
+
+const pathServerPublicStyles = './src/public-css';
+server.use(express.static(pathServerPublicStyles));
+server.use(express.static('public'));

@@ -3,49 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/App.scss" />
+    <link rel="stylesheet" href="/main.css" />
     <title>Document</title>
   </head>
   <body>
     <header></header>
-    <main>
-      <section className="preview">
-        <div
-          className="projectImage"
-          style="background-image: url(<%=project.image%>)"
-        ></div>
-        <article className="card">
-          <h2 className="card__projectTitle">
-            <span className="card__projectTitle--text">Proyectos Molones</span>
+    <main class="container">
+      <section class="preview">
+        <div class="projectImage" style="background-image: url(<%=project.image%>)"></div>
+        <article class="card">
+          <h2 class="card__projectTitle">
+            <span class="card__projectTitle--text">Proyectos Molones</span>
           </h2>
 
-          <div className="card__author">
-            <div
-              className="card__authorPhoto"
-              style="background-image: url(<%=project.photo%>)"
-            ></div>
-            <p className="card__job"><%= project.job %></p>
-            <h3 className="card__name"><%= project.autor %></h3>
+          <div class="card__author">
+            <div class="card__authorPhoto" style="background-image: url(<%=project.photo%>)"></div>
+            <p class="card__job"><%= project.job %></p>
+            <h3 class="card__name"><%= project.autor %></h3>
           </div>
 
-          <div className="card__project">
-            <h3 className="card__name"><%= project.name %></h3>
-            <p className="card__slogan"><%= project.slogan %></p>
-            <h3 className="card__descriptionTitle">Product description</h3>
-            <p className="card__description"><%= project.desc %></p>
+          <div class="card__project">
+            <h3 class="card__name"><%= project.name %></h3>
+            <p class="card__slogan"><%= project.slogan %></p>
+            <h3 class="card__descriptionTitle">Product description</h3>
+            <p class="card__description"><%= project.desc %></p>
 
-            <div className="card__technicalInfo">
-              <p className="card__technologies"><%= project.technologies %></p>
+            <div class="card__technicalInfo">
+              <p class="card__technologies"><%= project.technologies %></p>
 
               <a
-                className="icon icon__www"
+                class="icon icon__www"
                 href="<%= project.demo %>"
                 title="Haz click para ver el proyecto online"
               >
                 Web link
               </a>
               <a
-                className="icon icon__github"
+                class="icon icon__github"
                 href="<%= project.repo %>"
                 title="Haz click para ver el código del proyecto"
               >
