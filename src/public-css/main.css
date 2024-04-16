@@ -76,12 +76,17 @@
   text-transform: capitalize;
   color: var(--color-white);
 }
-
+.main {
+  max-width: 700px;
+  margin: auto;
+}
 .container {
   padding: 22px 22px 0 22px;
   background-color: var(--color-dark);
 }
-
+.preview {
+  margin-top: 15px;
+}
 .preview .projectImage {
   width: 100%;
   aspect-ratio: 1 / 1;
