@@ -1,9 +1,23 @@
+.projectList__container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 @media screen and (min-width: 768px) {
     .projectList__container {
+        margin-top: 50px;
         grid-column: span 2;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 5px;
         justify-items: stretch;
     }
+}
+
+@media screen and (min-width: 1200px) {
+   .projectList__container {
+    grid-template-columns: 1fr 1fr 1fr;
+   } 
 }

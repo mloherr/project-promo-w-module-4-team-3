@@ -8,8 +8,6 @@
 }
 
 .hero {
-  margin-bottom: 3rem;
-
   .title {
     font: $font-title-big;
     margin-bottom: 8px;
@@ -19,8 +17,11 @@
     font: $font-text-big;
     text-align: center;
     margin-inline: 4rem;
-    margin-bottom: 1.8rem;
   }
+}
+
+.button__newProject{
+  grid-column: span 2;
 }
 
 .preview {
@@ -352,5 +353,10 @@
 
   .hero {
     grid-column: span 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main {
+    max-width: 1400px;
   }
 }
