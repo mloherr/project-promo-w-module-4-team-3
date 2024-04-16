@@ -40,6 +40,7 @@ const App = () => {
 			.then((response) => response.json())
 			.then((result) => {
 				setUrl(result.cardURL);
+				console.log(result);
 			})
 			.catch((error) => console.log(error));
 	};

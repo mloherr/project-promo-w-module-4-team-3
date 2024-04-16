@@ -3,7 +3,6 @@ import Header from "./Header";
 import Footer from "./Footer";
 import NewProject from "./NewProject";
 import ProjectsList from "./ProjectsList";
-import Preview from "./Preview";
 import { Routes, Route } from "react-router-dom";
 
 function MainPage({
@@ -44,7 +43,6 @@ function MainPage({
 						element={<ProjectsList projectsApi={projectsApi} />}
 					/>
 				</Routes>
-				{/* <Preview projectInfo={projectInfo} cardUrl={cardUrl} /> */}
 			</main>
 			<Footer />
 		</>

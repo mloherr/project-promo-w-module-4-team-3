@@ -25,28 +25,28 @@
           <div class="card__author">
             <div class="card__authorPhoto" style="background-image: url(<%=project.photo%>)"></div>
             <p class="card__job"><%= project.job %></p>
-            <h3 class="card__name"><%= project.autor %></h3>
+            <h3 class="card__name"><%= project.author %></h3>
           </div>
 
           <div class="card__project">
             <h3 class="card__name"><%= project.name %></h3>
             <p class="card__slogan"><%= project.slogan %></p>
             <h3 class="card__descriptionTitle">Product description</h3>
-            <p class="card__description"><%= project.desc %></p>
+            <p class="card__description"><%= project.descr %></p>
 
             <div class="card__technicalInfo">
               <p class="card__technologies"><%= project.technologies %></p>
 
               <a
                 class="icon icon__www"
-                href="<%= project.demo %>"
+                href=`<%= project.urlDemo %>`
                 title="Haz click para ver el proyecto online"
               >
                 Web link
               </a>
               <a
                 class="icon icon__github"
-                href="<%= project.repo %>"
+                href=`<%= project.urlGithub %>`
                 title="Haz click para ver el código del proyecto"
               >
                 GitHub link
