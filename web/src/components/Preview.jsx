@@ -40,6 +40,7 @@ function Preview({ projectInfo }) {
             <a
               className="icon icon__www"
               href={projectInfo.demo}
+              target="_blank"
               title="Haz click para ver el proyecto online"
             >
               Web link
@@ -47,6 +48,7 @@ function Preview({ projectInfo }) {
             <a
               className="icon icon__github"
               href={projectInfo.repo}
+              target="_blank"
               title="Haz click para ver el código del proyecto"
             >
               GitHub link

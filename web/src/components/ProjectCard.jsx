@@ -36,6 +36,7 @@ function ProjectCard({ projectApi }) {
           <a
             className="icon icon__www"
             href={projectApi.urlDemo}
+            target="_blank"
             title="Haz click para ver el proyecto online"
           >
             Web link
@@ -43,6 +44,7 @@ function ProjectCard({ projectApi }) {
           <a
             className="icon icon__github"
             href={projectApi.urlGithub}
+            target="_blank"
             title="Haz click para ver el código del proyecto"
           >
             GitHub link
