@@ -76,7 +76,7 @@ server.get("/detail/:idProject", async (req, res) => {
 	res.render("detail", { project: result[0] });
 });
 
-const staticServer = "./web";
+const staticServer = "./src/public-react";
 server.use(express.static(staticServer));
 
 const pathServerPublicStyles = "./src/public-css";
