@@ -1,12 +1,13 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 function CardUrl({ cardUrl }) {
   return (
     <div className="messageCardCreated">
       <p>La tarjeta ha sido creada:</p>
-      <a href={cardUrl} target="_blank">
+      <Link to={`${cardUrl}`} target="_blank">
         {cardUrl}
-      </a>
+      </Link>
     </div>
   );
 }

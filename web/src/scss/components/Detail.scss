@@ -1,0 +1,179 @@
+@import '../core/reset';
+@import '../core/variables';
+
+  @media screen and (min-width: 420px) {
+    :root {
+      font-size: 12px;
+    }
+  }
+  
+  @media screen and (min-width: 560px) {
+    :root {
+      font-size: 14px;
+    }
+  }
+  
+
+  .main {
+    max-width: 700px;
+    margin: auto;
+  }
+  
+
+  .preview {
+    margin-top: 15px;
+  
+    .projectImage {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      outline: solid 1px pink;
+      background-image: url('../images/ebook-example.jpg');
+      background-position: top center;
+      background-size: cover;
+    }
+  
+ 
+  
+  .card {
+    margin-inline: 20px;
+    transform: translateY(-45px);
+    display: grid;
+    grid-template-columns: 40% 60%;
+    color: $color-black;
+    font: $font-card-text;
+    border-radius: 20px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-style: solid;
+    border-width: 1px;
+    border-image-source: linear-gradient(to bottom, $color-white 0%, rgba(0, 0, 0, 0));
+    border-image-slice: 1;
+    background-image: linear-gradient(to bottom, $color-white, $color-white),
+      linear-gradient(to bottom, $color-white 0%, rgba(0, 0, 0, 0));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+  
+    &__projectTitle {
+      grid-column: 2;
+      position: relative;
+      margin: 15px 10px 1rem 0;
+      text-align: center;
+      text-transform: capitalize;
+      font: $font-card-section;
+  
+      &::before {
+        content: '';
+        position: absolute;
+        top: calc(50% - 1px);
+        bottom: calc(50% - 1px);
+        left: 0;
+        right: 0;
+        z-index: 0;
+        background-image: linear-gradient(
+          to right,
+          white,
+          #232323 15%,
+          $color-black,
+          #232323 85%,
+          white
+        );
+      }
+  
+      &--text {
+        position: relative;
+        padding-inline: 0.1em;
+        z-index: 1;
+        background-color: $color-white;
+      }
+    }
+  
+    &__author {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
+  
+      &--photo {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        background-image: url('../images/avatar.webp');
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 0.8rem;
+      }
+  
+      &--job {
+        margin-bottom: 0.2rem;
+      }
+  
+      &--name {
+        font: $font-card-title;
+        margin-bottom: 0.2rem;
+      }
+    }
+  
+    &__project {
+      margin-right: 10px;
+  
+      &--slogan {
+        font: $font-card-subtitle;
+        margin-top: -0.2rem;
+        margin-bottom: 0.8rem;
+      }
+  
+      &--descriptionTitle {
+        font-weight: inherit;
+        text-transform: capitalize;
+      }
+  
+      &--technicalInfo {
+        display: grid;
+        grid-template-columns: 1fr 2rem 2rem;
+        gap: 0.5em;
+        margin-block: 1.8rem;
+      }
+  
+      &--technologies {
+        font: $font-card-tech;
+      }
+    }
+  }
+  
+  .icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    color: transparent;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 0 $color-greyish-brown-two;
+  
+    &__www {
+      background-image: url('/images/globe-solid.svg');
+    }
+  
+    &__github {
+      background-image: url('/images/github.svg');
+    }
+  }
+  
+  .landingPage__button {
+    width: 145px;
+    margin-inline: auto;
+    margin-right: 10px;
+    margin-block: 8px;
+    padding: 5px 18px;
+    color: $color-white;
+    font: $font-button;
+    text-transform: none;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 40px;
+    background-color: transparent;
+    background-image: linear-gradient(to right, $color-dark-lilac -2%, #c0b7e8 98%);
+    cursor: pointer;
+  
+    &:hover {
+      border-color: $color-white;
+    }
+}}

@@ -71,14 +71,17 @@ server.post('/api/newproject', async (req: any, res:any) => {
   });
 });
 
-server.get('/detail/:idProject', async (req: any, res:any) => {
+server.get('/api/detail/:idProject', async (req: any, res:any) => {
   const { idProject } = req.params;
   const connection = await getDBConnection();
   const sqlQuery =
     'SELECT * FROM projects, author WHERE projects.fk_idAuthor = author.idAuthor AND projects.idProject = ?';
   const [result] = await connection.query(sqlQuery, [idProject]);
   connection.end();
-  res.render('detail', { project: result[0] });
+  res.status(200).json({
+    status: 'success',
+   project: result[0],
+  })
 });
 
 const staticServer = './api/public-react';

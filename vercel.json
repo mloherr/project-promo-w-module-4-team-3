@@ -8,10 +8,6 @@
     {
       "src": "api/public-react/**",
       "use": "@vercel/static"
-    },
-    {
-      "src": "api/public-css/**",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
