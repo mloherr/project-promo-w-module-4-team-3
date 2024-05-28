@@ -23,7 +23,7 @@ const Detail = () => {
   return (
     <>
       <Header />
-      <div className="main">
+      <div className="container">
         <a
           className="landingPage__button"
           href="https://project-promo-w-module-4-team-3.vercel.app/#/MainPage/"
