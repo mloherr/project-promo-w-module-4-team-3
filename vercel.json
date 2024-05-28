@@ -20,10 +20,6 @@
       "dest": "/api/public-react/index.html"
     },
     {
-      "src": "/detail/:idProject",
-      "dest": "/api/index.ts"
-    },
-    {
       "src": "/(.*)",
       "dest": "/api/public-react/$1"
     }
