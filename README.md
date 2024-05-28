@@ -24,4 +24,4 @@ El proyecto utiliza las siguientes tecnologías:
 
 Puedes comenzar a hacer tus tarjetas personalizadas en el siguiente enlace:
 
-https://choripopins-project.onrender.com/
+https://project-promo-w-module-4-team-3.vercel.app/

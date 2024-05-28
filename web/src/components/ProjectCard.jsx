@@ -1,8 +1,8 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 function ProjectCard({ projectApi }) {
   const divStyle = { backgroundImage: `url(${projectApi.photo})` };
-  const urlDetailProject = `https://choripopins-project.onrender.com/detail/${projectApi.idProject}`;
+  const urlDetailProject = `https://project-promo-w-module-4-team-3.vercel.app/detail/${projectApi.idProject}`;
 
   return (
     <a href={urlDetailProject} className="card">
@@ -12,26 +12,26 @@ function ProjectCard({ projectApi }) {
 
       <div className="card__author">
         <div className="card__authorPhoto" style={divStyle}></div>
-        <p className="card__job">{projectApi.job || "Babysitter"}</p>
-        <h3 className="card__name">{projectApi.author || "Mary Poppins"}</h3>
+        <p className="card__job">{projectApi.job || 'Babysitter'}</p>
+        <h3 className="card__name">{projectApi.author || 'Mary Poppins'}</h3>
       </div>
 
       <div className="card__project">
         <h3 className="card__name">
-          {projectApi.name || "Elegant Workspaces"}
+          {projectApi.name || 'Elegant Workspaces'}
         </h3>
         <p className="card__slogan">
-          {projectApi.slogan || "Exclusive designs"}
+          {projectApi.slogan || 'Exclusive designs'}
         </p>
         <h3 className="card__descriptionTitle">Product description</h3>
         <p className="card__description">
           {projectApi.descr ||
-            "¡Hey! Soy Mary Poppins, la niñera más top de todas. ¿Severa? Bueno, tal vez un poquito, pero siempre con el mayor cuidado. Me encanta sacar trucos de magia y mantenerme siempre bajo control mientras cuido a los hijos de los Banks. ¿Mi estilo? Siempre me verás con mi sombrero gigante y mi súper cool paraguas. En pocas palabras, soy una figura misteriosa y súper divertida que deja una huella mágica en todos los que me conocen."}
+            '¡Hey! Soy Mary Poppins, la niñera más top de todas. ¿Severa? Bueno, tal vez un poquito, pero siempre con el mayor cuidado. Me encanta sacar trucos de magia y mantenerme siempre bajo control mientras cuido a los hijos de los Banks. ¿Mi estilo? Siempre me verás con mi sombrero gigante y mi súper cool paraguas. En pocas palabras, soy una figura misteriosa y súper divertida que deja una huella mágica en todos los que me conocen.'}
         </p>
 
         <div className="card__technicalInfo">
           <p className="card__technologies">
-            {projectApi.technologies || "SuperBolso - SuperParaguas"}
+            {projectApi.technologies || 'SuperBolso - SuperParaguas'}
           </p>
 
           <a

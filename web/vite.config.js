@@ -1,8 +1,8 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [react()],
-	// base: "https://choripopins-project.onrender.com",
+  plugins: [react()],
+  // base: "https://project-promo-w-module-4-team-3.vercel.app",
 });
