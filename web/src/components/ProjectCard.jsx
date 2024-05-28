@@ -3,10 +3,9 @@ import { Link } from 'react-router-dom';
 
 function ProjectCard({ projectApi }) {
   const divStyle = { backgroundImage: `url(${projectApi.photo})` };
-  const urlDetailProject = `https://project-promo-w-module-4-team-3.vercel.app/#/detail/${projectApi.idProject}`;
 
   return (
-    <Link to={urlDetailProject} className="card">
+    <Link to={`/detail/${projectApi.idProject}`} className="card">
       <h2 className="card__projectTitle">
         <span className="card__projectTitle--text">Proyectos Molones</span>
       </h2>
