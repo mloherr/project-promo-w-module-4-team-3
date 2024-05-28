@@ -16,11 +16,14 @@
   .detailSection{
     display: flex;
     flex-direction: column;
+    max-width: 700px;
   }
 
 .buttonsSection {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: row;
+  gap: 50px;
 }
 
   .preview {
@@ -149,11 +152,8 @@
   }
   
   
-  .landingPage__button {
+  .detail__button {
     width: 145px;
-    margin-inline: auto;
-    margin-right: 10px;
-    margin-block: 8px;
     padding: 5px 18px;
     color: $color-white;
     font: $font-button;

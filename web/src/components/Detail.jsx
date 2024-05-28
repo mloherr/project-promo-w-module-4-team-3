@@ -26,14 +26,14 @@ const Detail = () => {
       <div className="detailSection">
         <div className="buttonsSection">
           <a
-            className="landingPage__button"
+            className="detail__button"
             href="https://project-promo-w-module-4-team-3.vercel.app/#/MainPage/"
             title="Crear proyecto"
           >
             NUEVO PROYECTO
           </a>
           <a
-            className="landingPage__button"
+            className="detail__button"
             href="https://project-promo-w-module-4-team-3.vercel.app/#/MainPage/projects"
             title="Crear proyecto"
           >
