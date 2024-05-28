@@ -6,7 +6,6 @@ import LandingPage from './LandingPage';
 import MainPage from './MainPage';
 import localStorage from '../services/localStorage';
 import projectApi from '../services/projectsApi';
-import Detail from './Detail';
 
 const App = () => {
   const infoDefault = {
@@ -77,7 +76,6 @@ const App = () => {
             />
           }
         />
-        <Route path="/detail/:idProject" element={<Detail />} />
       </Routes>
     </div>
   );
