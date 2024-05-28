@@ -13,6 +13,15 @@
     }
   }
 
+  .detailSection{
+    display: flex;
+    flex-direction: column;
+  }
+
+.buttonsSection {
+  display: flex;
+  justify-content: space-between;
+}
 
   .preview {
     margin-top: 15px;

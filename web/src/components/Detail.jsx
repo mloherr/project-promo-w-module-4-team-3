@@ -23,21 +23,23 @@ const Detail = () => {
   return (
     <>
       <Header />
-      <div className="main">
-        <a
-          className="landingPage__button"
-          href="https://project-promo-w-module-4-team-3.vercel.app/#/MainPage/"
-          title="Crear proyecto"
-        >
-          NUEVO PROYECTO
-        </a>
-        <a
-          className="landingPage__button"
-          href="https://project-promo-w-module-4-team-3.vercel.app/#/MainPage/projects"
-          title="Crear proyecto"
-        >
-          VER PROYECTOS
-        </a>
+      <div className="detailSection">
+        <div className="buttonsSection">
+          <a
+            className="landingPage__button"
+            href="https://project-promo-w-module-4-team-3.vercel.app/#/MainPage/"
+            title="Crear proyecto"
+          >
+            NUEVO PROYECTO
+          </a>
+          <a
+            className="landingPage__button"
+            href="https://project-promo-w-module-4-team-3.vercel.app/#/MainPage/projects"
+            title="Crear proyecto"
+          >
+            VER PROYECTOS
+          </a>
+        </div>
         {loading ? (
           <p>Loading...</p>
         ) : (
