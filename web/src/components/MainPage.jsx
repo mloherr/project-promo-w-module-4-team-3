@@ -3,7 +3,6 @@ import Header from './Header';
 import Footer from './Footer';
 import NewProject from './NewProject';
 import ProjectsList from './ProjectsList';
-import Detail from './Detail';
 import { Routes, Route } from 'react-router-dom';
 
 function MainPage({
@@ -43,7 +42,6 @@ function MainPage({
             path="/projects/"
             element={<ProjectsList projectsApi={projectsApi} />}
           />
-          <Route path="/detail/:idProject" element={<Detail />} />
         </Routes>
       </main>
       <Footer />
