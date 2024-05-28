@@ -12,10 +12,6 @@
     {
       "src": "api/public-css/**",
       "use": "@vercel/static"
-    },
-    {
-      "src": "views/detail.ejs",
-      "use": "@vercel/static"
     }
   ],
   "routes": [

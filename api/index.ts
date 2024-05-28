@@ -9,6 +9,7 @@ server.use(cors());
 server.use(express.json({ limit: '50mb' }));
 server.use(express.urlencoded({ limit: '50mb' }));
 server.set('view engine', 'ejs');
+server.set('views', path.join(__dirname, 'views'));
 require('dotenv').config();
 
 async function getDBConnection() {
