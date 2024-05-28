@@ -14,7 +14,7 @@
       "use": "@vercel/static"
     },
     {
-      "src": "api/views/detail.ejs",
+      "src": "views/detail.ejs",
       "use": "@vercel/static"
     }
   ],
