@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 function ProjectCard({ projectApi }) {
   const divStyle = { backgroundImage: `url(${projectApi.photo})` };
-  const urlDetailProject = `https://project-promo-w-module-4-team-3.vercel.app/detail/${projectApi.idProject}`;
+  const urlDetailProject = `https://project-promo-w-module-4-team-3.vercel.app/#/detail/${projectApi.idProject}`;
 
   return (
-    <a href={urlDetailProject} className="card">
+    <Link to={urlDetailProject} className="card">
       <h2 className="card__projectTitle">
         <span className="card__projectTitle--text">Proyectos Molones</span>
       </h2>
@@ -52,7 +53,7 @@ function ProjectCard({ projectApi }) {
           </a>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
 

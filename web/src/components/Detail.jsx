@@ -13,7 +13,7 @@ const Detail = () => {
     fetch(`${URL}/api/detail/${idProject}`)
       .then((response) => response.json())
       .then((data) => {
-        setProject(data);
+        setProject(data.project);
       });
     setLoading(false);
   }, []);
