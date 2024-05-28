@@ -14,8 +14,8 @@ const Detail = () => {
       .then((response) => response.json())
       .then((data) => {
         setProject(data.project);
+        setLoading(false);
       });
-    setLoading(false);
   }, []);
 
   if (loading) {

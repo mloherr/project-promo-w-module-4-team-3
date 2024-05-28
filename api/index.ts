@@ -67,7 +67,7 @@ server.post('/api/newproject', async (req: any, res:any) => {
     sucess: true,
     idProject: projectResult.insertId,
     idAuthor: authorResult.insertId,
-    cardURL: `${process.env.DOMAIN_URL}/detail/${projectResult.insertId}`,
+    cardURL: `${process.env.DOMAIN_URL}/#/detail/${projectResult.insertId}`,
   });
 });
 
