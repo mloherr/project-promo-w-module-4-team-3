@@ -11,16 +11,16 @@ require('dotenv').config();
 
 async function getDBConnection() {
   const connection = await mysql.createConnection({
-    host: 'sql.freedb.tech',
-    user: 'freedb_admin_choris',
-    password: process.env.password,
-    database: process.env.database,
+    host: process.env.DB_URL,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
   });
   connection.connect();
   return connection;
 }
 
-const port = process.env.port || 5001;
+const port = process.env.PORT || 4002;
 server.listen(port, () => {
   console.log('Server is running on port ' + port);
 });
@@ -63,7 +63,7 @@ server.post('/api/newproject', async (req, res) => {
     sucess: true,
     idProject: projectResult.insertId,
     idAuthor: authorResult.insertId,
-    cardURL: `${process.env.URL}/detail/${projectResult.insertId}`,
+    cardURL: `${process.env.DOMAIN_URL}/detail/${projectResult.insertId}`,
   });
 });
 
