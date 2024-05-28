@@ -12,16 +12,15 @@
       font-size: 14px;
     }
   }
-  
-  .container {
+
+
+  .preview {
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-
-  .preview {
-    margin-top: 15px;
   
     .projectImage {
       width: 100%;
@@ -140,22 +139,6 @@
     }
   }
   
-  .icon {
-    width: 1.6rem;
-    height: 1.6rem;
-    color: transparent;
-    cursor: pointer;
-    border-radius: 50%;
-    box-shadow: 0 0 5px 0 $color-greyish-brown-two;
-  
-    &__www {
-      background-image: url('../images/globe-solid.svg');
-    }
-  
-    &__github {
-      background-image: url('../images/github.svg');
-    }
-  }
   
   .landingPage__button {
     width: 145px;
@@ -176,4 +159,4 @@
     &:hover {
       border-color: $color-white;
     }
-}}
+}
