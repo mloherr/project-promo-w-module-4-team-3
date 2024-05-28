@@ -2,11 +2,11 @@
   "name": "choripopins project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
+    "start": "ts-node api/index.ts",
+    "dev": "nodemon api/index.ts",
     "publish-react": "cd web && npm run build && cd .. && rm -rf ./api/public-react && mv ./web/dist ./api/public-react"
   },
   "author": "",

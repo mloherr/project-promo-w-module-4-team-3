@@ -1,3 +1,5 @@
+import path from "path";
+
 const express = require("express");
 const cors = require('cors');
 const mysql = require('mysql2/promise');
@@ -26,7 +28,7 @@ server.listen(port, () => {
 });
 
 
-server.get('/api/projects', async (req, res) => {
+server.get('/api/projects', async (req: any, res:any) => {
   const connection = await getDBConnection();
   const sql = 'SELECT * FROM author, projects WHERE idAuthor = fk_idAuthor';
   const [projectsResults] = await connection.query(sql);
@@ -38,7 +40,7 @@ server.get('/api/projects', async (req, res) => {
   });
 });
 
-server.post('/api/newproject', async (req, res) => {
+server.post('/api/newproject', async (req: any, res:any) => {
   const connection = await getDBConnection();
   const authorQuerySQL =
     'INSERT INTO author (author, job, photo) VALUES (?,?,?)';
@@ -68,7 +70,7 @@ server.post('/api/newproject', async (req, res) => {
   });
 });
 
-server.get('/detail/:idProject', async (req, res) => {
+server.get('/detail/:idProject', async (req: any, res:any) => {
   const { idProject } = req.params;
   const connection = await getDBConnection();
   const sqlQuery =
@@ -83,7 +85,7 @@ server.use(express.static(staticServer));
 
 const pathServerPublicStyles = './api/public-css';
 server.use(express.static(pathServerPublicStyles));
-server.use(express.static('public'));
+server.use(express.static(path.join(__dirname, 'public')));
 
 
 module.exports = server;
